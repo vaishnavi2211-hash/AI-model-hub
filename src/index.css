@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Variables ───────────────────────────────────────── */
+@layer base {
+  :root {
+    /* Light mode */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 210 20% 98%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 189 84% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 93%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 20% 93%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 189 84% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 189 84% 40%;
+    --radius: 0.5rem;
+    --success: 142 71% 35%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 215 16% 47%;
+    --sidebar-primary: 189 84% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 93%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 189 84% 40%;
+  }
+
+  .dark {
+    /* Dark mode — #0b0f19 base */
+    --background: 222 39% 7%;
+    --foreground: 210 40% 95%;
+    --card: 222 39% 10%;
+    --card-foreground: 210 40% 95%;
+    --popover: 222 39% 10%;
+    --popover-foreground: 210 40% 95%;
+    --primary: 189 84% 53%;
+    --primary-foreground: 222 39% 7%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 95%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 16% 60%;
+    --accent: 189 84% 53%;
+    --accent-foreground: 222 39% 7%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 95%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 189 84% 53%;
+    --success: 142 71% 45%;
+    --success-foreground: 222 39% 7%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 39% 7%;
+
+    --sidebar-background: 222 39% 5%;
+    --sidebar-foreground: 215 16% 60%;
+    --sidebar-primary: 189 84% 53%;
+    --sidebar-primary-foreground: 222 39% 7%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 189 84% 53%;
+  }
+}
+
+/* ─── Base Styles ─────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border box-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  p {
+    @apply text-muted-foreground;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* ─── Component Utilities ─────────────────────────────────── */
+@layer utilities {
+
+  /* Glass / Card */
+  .glass {
+    @apply bg-card border border-border;
+  }
+
+  /* Cyan highlight for headings */
+  .highlight {
+    color: #22d3ee;
+  }
+
+  /* Primary CTA button */
+  .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #22d3ee;
+    color: #000;
+    font-weight: 600;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .primary-btn:hover {
+    background-color: #06b6d4;
+  }
+
+  /* Secondary outline button */
+  .secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #e2e8f0;
+    font-weight: 500;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .secondary-btn:hover {
+    border-color: #22d3ee;
+    color: #22d3ee;
+  }
+
+  /* Navbar */
+  .navbar {
+    @apply bg-background;
+    border-bottom: 1px solid #1e293b;
+  }
+
+  /* Model card */
+  .model-card {
+    background-color: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 0.75rem;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  .model-card:hover {
+    transform: translateY(-3px);
+    border-color: #334155;
+  }
+
+  /* Heading gradient (simplified to solid) */
+  .gradient-text {
+    @apply text-foreground font-bold;
+  }
+
+  /* Glow helpers (kept minimal, no spread) */
+  .glow-primary {
+    box-shadow: 0 0 12px -4px hsl(var(--primary) / 0.4);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 12px -4px hsl(var(--accent) / 0.4);
+  }
+}

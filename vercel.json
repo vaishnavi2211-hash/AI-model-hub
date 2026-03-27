@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/hf-chat",
+      "destination": "https://router.huggingface.co/v1/chat/completions"
+    },
+    {
+      "source": "/api/hf-image",
+      "destination": "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
