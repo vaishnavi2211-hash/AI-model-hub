@@ -1,20 +1,42 @@
-# Hugging Face Clone
+#  AI Model Hub
 
-A frontend-focused clone project inspired by the Hugging Face platform, built to practice modern UI development, responsive layouts, and component-based architecture using React.js. The project recreates core interface sections such as model browsing, navigation, and AI-related content presentation.
+A centralized platform for discovering and interacting with various AI models.  
+It acts as a unified interface to test prompts across different AI providers without managing multiple accounts.
 
-## Features
+---
 
-* Responsive UI inspired by Hugging Face
-* Component-based frontend architecture
-* Dynamic model and content display sections
-* Clean navigation and modern interface design
-* Mobile-friendly layout
+##  Technologies
+- React.js  
+- REST APIs  
+- Tailwind CSS  
+- Node.js
+- HTML5 
 
-## Tech Stack
+---
 
-* React.js
-* JavaScript
-* HTML5
-* CSS3
-* Tailwind CSS
-* Vercel
+##  Key Features
+- Search and filter system for models across text, image, and audio  
+- Interactive prompt playground  
+- Dynamic API endpoint routing based on selected model  
+- Responsive design optimized for both desktop and mobile  
+
+---
+
+##  Architecture & Workflow
+- Modular React component architecture  
+- Integration with third‑party REST APIs  
+- Tailwind CSS for consistent SaaS‑style UI  
+
+---
+
+##  Challenges Solved
+- Standardizing the data format from disparate third‑party APIs so they could all be rendered by a unified set of UI components.  
+
+---
+
+## My Contributions
+- Designed the complete UI/UX  
+- Implemented the filtering system  
+- Handled all API integration and error boundary handling
+
+Live Demo:https://final-project-eosin-phi.vercel.app/
